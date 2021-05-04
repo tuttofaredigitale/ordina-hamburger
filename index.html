@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Maialoso Burger</title>
+  </head>
+  <body>
+    <section id="overlay">
+      <img src="img/pig_burger.jpg" alt="Maialoso" id="logo">
+      <hr>
+      <form action="ordine.html" method="POST">
+				<h1>Crea il tuo panino</h1>
+        <section class="carne">
+          <label for="tipoCarne">Maiale, manzo o misto?</label><br>
+    			<input type="text" name="tipoCarne" id="tipoCarne">
+        </section>
+        <hr>
+        
+        <section class="hamburger">
+          <label for="quantità">Quanti hamburger vorresti?</label><br>
+          <input type="number" name="quantità" id="quantità">
+        </section>
+        <hr>
+        
+        <section class="cottura">
+          <label for="tipoCottura">Come vuoi la cottura?</label>
+          <br>
+          <span>Sangue</span>
+          <input type="range" name="tipoCottura" id="tipoCottura" value="2" min="1" max="3">
+          <span>Ben cotta</span>
+        </section>
+        <hr>
+        
+        <section class="iCondimenti">
+          <span>Quali condimenti vorresti?</span>
+          <br>
+          <input type="checkbox" name="condimenti" id="lattuga" value="lattuga">
+          <label for="lattuga">Lattuga</label>
+          <input type="checkbox" name="condimenti" id="pomodori" value="pomodori">
+          <label for="pomodori">Pomodori</label>
+          <input type="checkbox" name="condimenti" id="cipolla" value="cipolla">
+          <label for="cipolla">Cipolla</label>
+        </section>
+        <hr>
+        
+        <section class="conFormaggio">
+          <span>Vuoi il formaggio?</span>
+          <br>
+          <input type="radio" name="formaggio" id="si" value="si">
+          <label for="si">Si</label>
+          <input type="radio" name="formaggio" id="no" value="no">
+          <label for="no">No</label>
+        </section>
+        <hr>
+       
+        <section class="tipoPane">
+          <label for="pane">Che tipo di panino vorresti?</label><br>
+          <select name="pane" id="pane">
+            <option value="alLatte">Al latte</option>
+            <option value="alFormaggio">Ricoperto di formaggio</option>
+            <option value="classico">Classico hamburger</option>
+          </select>
+        </section>
+        <hr>
+        
+        <section class="selezioneSalse">
+          <label for="salsa">Ketchup, maionese o senape?</label><br>
+          <input list="salse" id="salsa" name="salsa">
+          <datalist id="salse">
+            <option value="ketchup"></option>
+            <option value="maionese"></option>
+            <option value="senape"></option>
+          </datalist>
+        </section>
+        <hr>
+        <section class="alreAggiunte">
+          <label for="extra">Vuoi aggiungere qualcos'altro?</label>
+          <br>
+          <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+        </section>
+        <hr>
+
+        <section class="inviaOrdine">
+          <div class="button">
+          <div class="tick">
+            <input type="submit" value="Invia"></div>
+          </div>
+        </section>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
